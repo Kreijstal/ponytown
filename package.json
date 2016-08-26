@@ -1,0 +1,25 @@
+{
+  "name": "ponytown-server",
+  "version": "1.0.0",
+  "description": "a server for ponytown",
+  "main": "town.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node town.js"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Niggest",
+  "license": "Rape",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "express-ws": "^2.0.0",
+    "jade": "^1.11.0",
+    "node-uuid": "^1.4.7"
+  }
+}
