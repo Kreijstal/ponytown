@@ -17943,22 +17943,22 @@ function(System) {
         e.errorMessage = r("data-error-message") || null ,
         n.exports
     });
-    System.registerDynamic("main", ["amd es6-shims passthrough", "toBlobShim", "CanvasContext2DEllipseShim", "ponytown app controller", "<bluebird passthrough>", "<angular passthrough>", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("main", ["amd es6-shims passthrough", "toBlobShim", "CanvasContext2DEllipseShim", "ponytown app controller", "<bluebird passthrough>", "<angular passthrough>", "ponytownapp settings"], !0, function(require, exports, module) {
         "use strict";
-        t("amd es6-shims passthrough"),
-        t("toBlobShim"),
-        t("CanvasContext2DEllipseShim"),
-        t("ponytown app controller");
-        var r = t("<bluebird passthrough>")
-          , i = t("<angular passthrough>")
-          , o = t("ponytownapp settings");
+        require("amd es6-shims passthrough"),
+        require("toBlobShim"),
+        require("CanvasContext2DEllipseShim"),
+        require("ponytown app controller");
+        var r = require("<bluebird passthrough>")
+          , angular = require("<angular passthrough>")
+          , o = require("ponytownapp settings");
         return r.config({
             warnings: !1,
             longStackTraces: o.debug
         }),
-        i.element().ready(function() {
-            return i.bootstrap(document, ["app"])
+        angular.element().ready(function() {
+            return angular.bootstrap(document, ["app"])
         }),
-        n.exports
+        module.exports
     })
 }
