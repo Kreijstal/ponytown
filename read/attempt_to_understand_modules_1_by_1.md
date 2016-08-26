@@ -364,14 +364,15 @@ The minified code seems to match, so we can conclude with certainty, that this d
 ![25 nodes](https://trello-attachments.s3.amazonaws.com/57b87b94098efb7c804c44ae/1920x899/4ab48ca8cb0965068a27d24b09a225e1/am_21.8.2016_um_10_04_48_hochladen.png)
 So, the 4a modules seem to have about 25 nodes, so this will make our job very much easier!
 Since we figured this one out, I'll not put the dependency explanations here, since they're easily available anywhere else, like [here](https://www.npmjs.com/package/gl-buffer), I might make a list tho, for clarifying.
-- Module "65" [Bit-Twiddle](https://github.com/mikolalysenko/bit-twiddle)
-- Module "67" [Dup](https://github.com/scijs/dup)
-- Module "64" [ndarray-ops](https://github.com/scijs/ndarray-ops)
-- Module "62" [cwise-compiler](https://github.com/scijs/cwise-compiler)
-- Module "5d' [uniq](https://github.com/mikolalysenko/uniq)
-- Module "5c" [ndarray](https://github.com/mikolalysenko/ndarray)
-- Module "5a" [is-buffer](https://github.com/feross/is-buffer)
-- Module "58" [iota-array](https://github.com/mikolalysenko/iota-array)
+
+* Module "65" [Bit-Twiddle](https://github.com/mikolalysenko/bit-twiddle)
+* Module "67" [Dup](https://github.com/scijs/dup)
+* Module "64" [ndarray-ops](https://github.com/scijs/ndarray-ops)
+* Module "62" [cwise-compiler](https://github.com/scijs/cwise-compiler)
+* Module "5d' [uniq](https://github.com/mikolalysenko/uniq)
+* Module "5c" [ndarray](https://github.com/mikolalysenko/ndarray)
+* Module "5a" [is-buffer](https://github.com/feross/is-buffer)
+* Module "58" [iota-array](https://github.com/mikolalysenko/iota-array)
 
 Module "75"
 -------
@@ -411,16 +412,17 @@ Module "9a"
 Okay, this is the gl-shader module and as you can see, it loads many other nodes too.  Since the gl-shader code is [here](https://github.com/stackgl/gl-shader), I won't explain the dependencies in detail.
 These are some 35 nodes, so we're way more than half now.
 I'll list the main dependency modules.
-- Module "92" [gl-format-compiler-error](https://github.com/wwwtyro/gl-format-compiler-error)
-- Module "" [sprintf-js](https://github.com/alexei/sprintf.js)
-- Module "" [glsl-shader-name](https://github.com/stackgl/glsl-shader-name)
-- Module "" [gl-constants]()
-- Module "" [add-line-numbers]()
-- Module "" [glsl-tokenizer](https://github.com/gl-modules/glsl-tokenizer)
-- Module "" [atob-lite](https://github.com/hughsk/atob-lite)
-- Module "" [through2](https://github.com/rvagg/through2)
-- Module "" [xtend](https://github.com/Raynos/xtend)
-- Module "" [readable-stream](https://github.com/nodejs/readable-stream)
+
+* Module "92" [gl-format-compiler-error](https://github.com/wwwtyro/gl-format-compiler-error)
+* Module "" [sprintf-js](https://github.com/alexei/sprintf.js)
+* Module "" [glsl-shader-name](https://github.com/stackgl/glsl-shader-name)
+* Module "" [gl-constants]()
+* Module "" [add-line-numbers]()
+* Module "" [glsl-tokenizer](https://github.com/gl-modules/glsl-tokenizer)
+* Module "" [atob-lite](https://github.com/hughsk/atob-lite)
+* Module "" [through2](https://github.com/rvagg/through2)
+* Module "" [xtend](https://github.com/Raynos/xtend)
+* Module "" [readable-stream](https://github.com/nodejs/readable-stream)
 CODE UPDATED
 =======
 Pony.town was updated while writing this tutorial.

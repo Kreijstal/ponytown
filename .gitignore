@@ -54,3 +54,5 @@ test/tmp
 test/version_tmp
 .yardoc
 _yardoc
+#IntelliJ IDEA
+.idea
