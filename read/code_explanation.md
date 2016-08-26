@@ -14,7 +14,7 @@ Well, this is my first attempt to understand the complexity of pony.town code, b
 
 Code Overall
 ===========
-:warning: *I think you should know a bit of JavaScript before entering the depths of this 'Tutorial'*
+*I think you should know a bit of JavaScript before entering the depths of this 'Tutorial'*
 
 At time of writting, ponytown's overall code looked like [this](http://pasted.co/d34d0007).
 
