@@ -379,6 +379,7 @@ Module "sprites"
 ---------------
 This stores the location of the sprites for the game, the coordinates. of the sprite images. Also stores movement, and sprites, a very interesting database to look at.
 ![20](https://trello-attachments.s3.amazonaws.com/57b87b94098efb7c804c44ae/1734x683/6f6e414262d8528369c2732b90a1d78a/am_20.8.2016_um_14_40_59_hochladen.png)
+
 Module 20 is one of the most required modules.
 
 Module "load&draw sprites"
@@ -395,6 +396,7 @@ How pony animations are defined.
 Module "draw pony"
 -----------------
 ![drawing ponies](https://trello-attachments.s3.amazonaws.com/57b87b94098efb7c804c44ae/1335x737/ebd116122f9ec56f1be379e8d5827729/am_20.8.2016_um_14_58_25_hochladen.png)
+
 The pony draw modulde, for webgl, and 2d.
 
 Module "pony methods"
@@ -431,6 +433,7 @@ This is the camera module
 Module "SpriteBatch"
 ----------------
 ![sprite operations](https://trello-attachments.s3.amazonaws.com/57b87b94098efb7c804c44ae/1388x668/51febc61b87012617428e16d9e765ac3/am_20.8.2016_um_17_13_18_hochladen.png)
+
 This is the spritebach module, it does things like drawing sprites.
 
 Module "NumberUtil"
@@ -463,6 +466,7 @@ var ndarray = require("ndarray")
 ```
 The minified code seems to match, so we can conclude with certainty, that this dependency tree can be very easily associated.
 ![25 nodes](https://trello-attachments.s3.amazonaws.com/57b87b94098efb7c804c44ae/1920x899/4ab48ca8cb0965068a27d24b09a225e1/am_21.8.2016_um_10_04_48_hochladen.png)
+
 So, the 4a modules seem to have about 25 nodes, so this will make our job very much easier!
 Since we figured this one out, I'll not put the dependency explanations here, since they're easily available anywhere else, like [here](https://www.npmjs.com/package/gl-buffer), I might make a list tho, for clarifying.
 
@@ -478,12 +482,14 @@ Since we figured this one out, I'll not put the dependency explanations here, si
 Module "75"
 -------
 ![process](https://trello-attachments.s3.amazonaws.com/57b87b94098efb7c804c44ae/929x422/af2ca3681fe6372aa828a10a6c832ebb/am_21.8.2016_um_13_06_44_hochladen.png)
+
 Since this code seems to have been made with browserify this is the fake. process module from node. It is triggered by cwise-compiler
 Code for it can be found [here](https://github.com/defunctzombie/node-process)
 
 Module "73"
 -----------------
 ![glsomething](https://trello-attachments.s3.amazonaws.com/57b87b94098efb7c804c44ae/1387x699/5cab517a959b00ce4c349a938142a1b2/am_21.8.2016_um_17_17_07_hochladen.png)
+
 This is another library tightly shared by glbuffer.
 This is the gl-texture2d library, it's [here](https://github.com/stackgl/gl-texture2d) 
 
