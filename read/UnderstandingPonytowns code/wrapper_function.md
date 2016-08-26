@@ -36,7 +36,6 @@ Greendow then proceeds to call mingle with the main callback
 Did you understand it now?
 ![wew](https://trello-attachments.s3.amazonaws.com/57afc72dc86b578183070ca2/859x328/94f4f35a1017f564faabf7010aa1af18/am_13.8.2016_um_20_53_51_hochladen.png)(here (function(t){t()} is 'mingle')
 
-
 If you are confused by this, then imagine how confused I was while trying to figure the fuck the code is doing.
  (I suppose there is a reason for making it so complicated like customizeability somewhere?)
 
