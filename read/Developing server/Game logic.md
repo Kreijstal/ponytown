@@ -30,6 +30,7 @@ Let's think on how we should use the game object from outside!
 Remember, unless we use callbacks/promises the game shouldn't have anything to do with/store information about the network.
 
 Also, this can also ensure our game can be benchmarked, and unit testable.
+
 PonyTown app
 -------------------
 I think a good way to handle is make just 1 ponytown game constructor, call it like `var game=new PonyTownGame();`
