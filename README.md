@@ -11,9 +11,11 @@ This was a Reverse Engineered version of the Reverse Engineered version of the O
 
 ## Running the server
 
-1) Use node.js to start the server, the main File is called `app.js`
+1) First, you need to have node and npm installed.
+2) Just type
 
-    $ node app.js
+    $ npm start
+That's it!
 
 Table of Contents
 -----------------

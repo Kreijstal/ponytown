@@ -1,5 +1,5 @@
 A bit of history
-------------------
+=====================
 As far as I know, no one has understood the whole code of pony.town other than Agmentizar, and probably they don't even know how it fully works, due to the use other frameworks.
 
 So far we've "reverse engineered" the game, by listening to the server requests, and sends, and setting some breakpoints here and there.
@@ -26,7 +26,7 @@ The first part of the website however calls Rollbar.js an error-reporting tool, 
 
 Table of Contents:
 
-- [DevTools](https://trello.com/c/DdBXcize) 
+- [DevTools](https://trello.com/c/DdBXcize)
 - [Understanding The Wrapper function](https://trello.com/c/hVphmgxL)
    * [Module loading](https://trello.com/c/7yQECegR)
 - [Modules](https://trello.com/c/zFDgVbMB)

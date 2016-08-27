@@ -91,7 +91,7 @@ function webSocketConnect(ws,req){
 }
 //now we can focus on these two functions
 function webSocketMessage(ws,message,context){
-sendWS(ws,"Your id is:"+context.sessionID+", and query is "+JSON.stringify(context.query))
+//sendWS(ws,"Your id is:"+context.sessionID+", and query is "+JSON.stringify(context.query))
 }
 
 function webSocketError(ws,error,context){
