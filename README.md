@@ -301,6 +301,8 @@ We can see more obviously that they're initializing the angular app here.
 Creating the server
 ====================== 
 ##### aka Getting shit done.
+In this section you will see how did we come up with trying to create a new server. This will probably be helpful in case our code gets outdated, then you will know how we do it, so you can update the server yourself!
+
 
 Logic First, Network Later
 -----------------------

@@ -73,7 +73,7 @@
     var data;
     if (data = bytes[convertTo]) {
       byte.set(value);
-      return bytes[convertTo].type[0]
+      return data.type[0]
     } else {
       throw new Error("Invalid convert string")
     }
@@ -81,8 +81,7 @@
 
   function fromBinaryToArray(arrayToConvert, conversionArray) {
     var values = [],
-      index = 0,
-      convIterate = 0;
+      index = 0;
     conversionArray.forEach(function(conv) {
       var length = bytes[conv].size
       values.push(fromBinaryToValue(arrayToConvert.slice(index, index + length), conv));
@@ -93,4 +92,4 @@
   }
   store.fromArrayToBinary = fromArrayToBinary;
   store.fromBinaryToArray = fromBinaryToArray;
-})(typeof exports == "undefined" ? self : exports)
+})(typeof exports == "undefined" ? self : exports);
