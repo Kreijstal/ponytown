@@ -27,7 +27,7 @@ Table of Contents
 -----------------
 
 - [FAQ](#faq)
-- [Introduction](#damnson)
+- [Introduction](#introduction)
 - Understanding the code
 - Figuring out what the network does
 - Creating the server
@@ -93,6 +93,8 @@ Well, I didn't, but this couldn've been possible without bootsy and niggest, tec
 
 ### How can I help?
 Wow, do you want to help? Well, uhm, I don't even know what to do most of the time, but you can check out the trello, the trello was supposed to be a place to put the things that we have to do but I filled it with too much bullshit about how the game worked. Sorry niggest.
+
+Also you can try organizing this mess of a README.md, pls.
 
 Introduction
 ===========
