@@ -12,7 +12,11 @@ const express=require('express'),//the HTTP server
 const homeController = require('./controllers/home'),
     PonyTownApp = require('./controllers/PonyTownApp.js');
 //setting variables
-var game=new PonyTownApp,getRandomInt=game.utils.getRandomInt;
+//server "factory"
+//Question should different servers be hosted on different pages, if so how that should be even handled?
+//How to 'communicate from other servers?' should each server be a different node process?
+var games=[{id:"main",name:"best server",desc:"The one and only server"}].map(function(server){return new PonyTownApp(server.id,server.name,server.desc)})
+var utils=PonyTownApp.prototype.utils,getRandomInt=utils.getRandomInt,version=PonyTownApp.prototype.version;
 //Express bullshit.
 app.set('port', process.env.PORT || 3000);
 app.use(session({secret:' ', cookie:{maxAge:30*60*1000, httpOnly:false}}));
@@ -45,7 +49,7 @@ var mapGenerators = [function() {
     return (y % 2) + 1
 }, function(x, y) {
     return ((x % 2) ^ (y % 2)) + 1
-}, game.utils.imageToFill(game.utils.mapValuesWithInstructions(
+}, utils.imageToFill(utils.mapValuesWithInstructions(
     [0,1,0,0,0,1,0,0
         ,1,1,1,0,1,1,1,0
         ,1,1,1,1,1,1,1,0
@@ -53,7 +57,7 @@ var mapGenerators = [function() {
         ,0,1,1,1,1,1,0,0
         ,0,0,1,1,1,0,0,0
         ,0,0,0,1,0,0,0,0],[0,1],[1,2])
-    ,8,7),game.utils.imageToFill(game.utils.mapValuesWithInstructions(
+    ,8,7),utils.imageToFill(utils.mapValuesWithInstructions(
     [1,0,1,1,1,0,
         1,0,1,0,0,0,
         1,1,1,1,1,0,
@@ -63,9 +67,9 @@ var mapGenerators = [function() {
     ,7,7)];
 
 var mapGenerator = (function(flip) {
-    var s = game.utils.stretchTileFunction(mapGenerators[getRandomInt(0, mapGenerators.length - 1)], getRandomInt(1, 4), getRandomInt(1, 4));
+    var s = utils.stretchTileFunction(mapGenerators[getRandomInt(0, mapGenerators.length - 1)], getRandomInt(1, 4), getRandomInt(1, 4));
     return function(x, y) {
-        return game.utils.mapValueWithInstructions(s(x, y), [1, 2], flip);
+        return utils.mapValueWithInstructions(s(x, y), [1, 2], flip);
     }
 })([
     [1, 2],
@@ -118,8 +122,8 @@ function sendWS(ws,message){
  * @type {{game-status, pony-save: api.'pony-save', pony: api.'pony', game-join: api.'game-join'}}
  */
 var api = {
-    'game-status': stringifyFunction(gameStatus),
-   'pony-save': stringifyFunction(ponySave),
+    'game/status': stringifyFunction(gameStatus),
+   'pony/save': stringifyFunction(ponySave),
    'pony': stringifyFunction(getPony),
    'game-join':stringifyFunction(joinGame)
 };
@@ -160,6 +164,7 @@ apiexpress.all("/:api",function (request, response, next) {
 
 
 //Gamy Logic
+games.forEach(function(game){
 var map=game.createMap(5,5,"main map");
 map.fill(mapGenerator([
     [1, 2],
@@ -168,12 +173,15 @@ map.fill(mapGenerator([
 game.addMap(map);
 game.defaultMap="main map";
 
+});
 //Bind logic everything here should be about the game, players and everything game related, the rest is network related.
 /**
  * Gets the status of the game
  */
  function gameStatus() {
-     return Object.assign(makeObject(["version", "offline"], game));
+     return Object.assign({version:version,servers:games.map(function(game){
+         return Object.assign(makeObject(["id","name","desc","offline"], game),{"online":game.players.length});
+     })});
  }
 /**
  * Saves a pony
@@ -181,7 +189,7 @@ game.defaultMap="main map";
 function ponySave(req,req,data) {
     var player=getPlayer(cookies.play),character=JSON.parse(data);
     if(player.characters&&character){
-        player.characters.push(character)
+        player.characters.push(character);
         return
     }else{
         return "fail!";

@@ -215,7 +215,7 @@ var PonyTownApp=(function()
      * @global
      * @class
      */
-    function PonyTownApp() {
+    function PonyTownApp(name,desc) {
         /**
          *
          * @public
@@ -227,6 +227,8 @@ var PonyTownApp=(function()
          * @type {Array.Player}
          */
         this.players = [];
+        this.name=name;
+        this.desc=desc;
     }
 
     /**

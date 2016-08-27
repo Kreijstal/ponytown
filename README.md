@@ -90,7 +90,8 @@ Like the understanding modules part. That would probably fill the entire page!
 Besides I'm not sure how to organize this shit either, help.
 ### How did you know you could do this?
 Well, I didn't, but this couldn've been possible without bootsy and niggest, technical and emotional support
-
+### What do you want in exchange for this?
+Help me become a better programmer.
 ### How can I help?
 Wow, do you want to help? Well, uhm, I don't even know what to do most of the time, but you can check out the trello, the trello was supposed to be a place to put the things that we have to do but I filled it with too much bullshit about how the game worked. Sorry niggest.
 
@@ -214,10 +215,10 @@ You can set-up watches, these are expressions that will get executed every step 
 
 Overview of the main code
 ----------------------------
-This wouldn't be possible to write if I hadn't read how the code inits. You can probably find more information although incomplete on the `read/` directory. 
+This wouldn't be possible to write if I hadn't read how the code inits. You can probably find more information although incomplete on the `read/` directory.
 
 ### Modules? In the browser?
-Yes, modules, the code seems to implement a `require`, modular system, so the first part of the code first initializes the module framework. Which is called SystemJS. 
+Yes, modules, the code seems to implement a `require`, modular system, so the first part of the code first initializes the module framework. Which is called SystemJS.
 
 You can read about it way more detail in `module_framework.md`
 
@@ -244,7 +245,7 @@ Okay, after skimming W3Schools Angular js tutorial, skimming relevant angularjs 
 
 Okay, due to my sheer stupidity, unclear, angular documentation, lack of googling, or just there not being enough resources, I replaced the minified AngularJS code and replaced it with the official non-minified code, so when I step through it, I have an idea of what the code is trying to do, very useful.
 
-if you take a look at [bootstrap guide](https://docs.angularjs.org/guide/bootstrap) you can see that on "manual initalization" part there is a code like 
+if you take a look at [bootstrap guide](https://docs.angularjs.org/guide/bootstrap) you can see that on "manual initalization" part there is a code like
 
 ```
     angular.element(document).ready(function() {
@@ -301,7 +302,7 @@ We can see more obviously that they're initializing the angular app here.
 
 
 Creating the server
-====================== 
+======================
 ##### aka Getting shit done.
 In this section you will see how did we come up with trying to create a new server. This will probably be helpful in case our code gets outdated, then you will know how we do it, so you can update the server yourself!
 
@@ -402,6 +403,9 @@ For network, we shoud use these node modules:
 * express-ws this makes it very easily to set ws as middleware for express.
 * express-sessions this will make tracking sessions very easy
 
+Okay there's an importat detail we have to talk about, front end server don't necessarily has to be the same server.
+So a server could just focus on hosting the game and not on the html or anything else.
+We would have to find a way to communicate with other servers.
 
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
