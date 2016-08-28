@@ -326,7 +326,7 @@ function(System) {
         e.getBinary = o,
         n.exports
     }),
-    System.registerDynamic("f", [], !0, function(t, e, n) {
+    System.registerDynamic("random string&rate limiter", [], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             for (var e = "", n = 0; n < t; n++)
@@ -348,7 +348,7 @@ function(System) {
         e.checkRateLimit = i,
         n.exports
     }),
-    System.registerDynamic("10", [], !0, function(t, e, n) {
+    System.registerDynamic("binary parser generator", [], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return !t.some(function(t) {
@@ -459,7 +459,7 @@ function(System) {
         e.createHandlers = u,
         n.exports
     }),
-    System.registerDynamic("11", [], !0, function(t, e, n) {
+    System.registerDynamic("PacketHandler", [], !0, function(t, e, n) {
         "use strict";
         e.defaultHandleFunction = function(t, e, n, r, i) {
             return n.apply(r, i)
@@ -536,7 +536,7 @@ function(System) {
         return e.PacketHandler = r,
         n.exports
     }),
-    System.registerDynamic("12", ["11"], !0, function(t, e, n) {
+    System.registerDynamic("DebugPacketHandler", ["PacketHandler"], !0, function(t, e, n) {
         "use strict";
         var r = this && this.__extends || function(t, e) {
             function n() {
@@ -547,7 +547,7 @@ function(System) {
             t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype,
             new n)
         }
-          , i = t("11")
+          , i = t("PacketHandler")
           , o = function(t) {
             function e(e, n, r, i, o, a, s) {
                 t.call(this, e, n, r, i, o),
@@ -587,7 +587,7 @@ function(System) {
         return e.DebugPacketHandler = o,
         n.exports
     }),
-    System.registerDynamic("13", ["14"], !0, function(t, e, n) {
+    System.registerDynamic("BasePacketWriter", ["14"], !0, function(t, e, n) {
         "use strict";
         var r = t("14")
           , i = function() {
@@ -664,7 +664,7 @@ function(System) {
         return e.BasePacketWriter = i,
         n.exports
     }),
-    System.registerDynamic("15", ["13"], !0, function(t, e, n) {
+    System.registerDynamic("PacketWriter", ["BasePacketWriter"], !0, function(t, e, n) {
         "use strict";
         var r = this && this.__extends || function(t, e) {
             function n() {
@@ -675,7 +675,7 @@ function(System) {
             t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype,
             new n)
         }
-          , i = t("13")
+          , i = t("BasePacketWriter")
           , o = function(t) {
             function e() {
                 t.apply(this, arguments),
@@ -888,7 +888,7 @@ function(System) {
         return e.BasePacketReader = i,
         n.exports
     }),
-    System.registerDynamic("17", ["16"], !0, function(t, e, n) {
+    System.registerDynamic("PacketReader", ["16"], !0, function(t, e, n) {
         "use strict";
         var r = this && this.__extends || function(t, e) {
             function n() {
@@ -967,7 +967,7 @@ function(System) {
         e.default = o,
         n.exports
     }),
-    System.registerDynamic("ClientSocket", ["<bluebird passthrough>", "possible socket methods?", "19", "f", "10", "11", "12", "15", "17", "<buffer from node attempt passthrough>"], !0, function(t, e, n) {
+    System.registerDynamic("ClientSocket", ["<bluebird passthrough>", "possible socket methods?", "key-valued arrays functions", "random string&rate limiter", "binary parser generator", "PacketHandler", "DebugPacketHandler", "PacketWriter", "PacketReader", "<buffer from node attempt passthrough>"], !0, function(t, e, n) {
         return function(n) {
             "use strict";
             function r() {
@@ -981,13 +981,13 @@ function(System) {
             }
             var i = t("<bluebird passthrough>")
               , o = t("possible socket methods?")
-              , a = t("19")
-              , s = t("f")
-              , l = t("10")
-              , u = t("11")
-              , c = t("12")
-              , f = t("15")
-              , p = t("17")
+              , a = t("key-valued arrays functions")
+              , s = t("random string&rate limiter")
+              , l = t("binary parser generator")
+              , u = t("PacketHandler")
+              , c = t("DebugPacketHandler")
+              , f = t("PacketWriter")
+              , p = t("PacketReader")
               , h = function() {
                 function t(t, e, n, r) {
                     var i = this;
@@ -1197,7 +1197,7 @@ function(System) {
         }(t("<buffer from node attempt passthrough>").Buffer),
         n.exports
     }),
-    System.registerDynamic("19", [], !0, function(t, e, n) {
+    System.registerDynamic("key-valued arrays functions", [], !0, function(t, e, n) {
         "use strict";
         function r(t, e) {
             for (var n = 0; n < t.length; n++)
@@ -1222,7 +1222,7 @@ function(System) {
         e.remove = o,
         n.exports
     }),
-    System.registerDynamic("1c", ["19"], !0, function(t, e, n) {
+    System.registerDynamic("1c", ["key-valued arrays functions"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return void 0 === t && (t = {}),
@@ -1259,7 +1259,7 @@ function(System) {
         function l(t) {
             return a(t) || s(t.prototype)
         }
-        var u = t("19")
+        var u = t("key-valued arrays functions")
           , c = []
           , f = [];
         return e.Method = r,
@@ -1639,7 +1639,7 @@ function(System) {
         e.containsCyrillic = i,
         n.exports
     }),
-    System.registerDynamic("2a", ["<socketPony wrapper passthrough>", "22", "21", "2b", "2c", "1f", "25", "26", "27", "20", "2d", "29", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("ClientActions", ["<socketPony wrapper passthrough>", "22", "21", "2b", "2c", "1f", "25", "26", "27", "20", "2d", "29", "ponytownapp settings"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return y.account.settings.filterSwearWords ? g.filterBadWords(t) : t
@@ -1860,14 +1860,14 @@ function(System) {
         return e.ClientActions = x,
         n.exports
     }),
-    System.registerDynamic("game service", ["<bluebird passthrough>", "<lodash core passthrough>", "<socketPony wrapper passthrough>", "22", "2d", "2a", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("game service", ["<bluebird passthrough>", "<lodash core passthrough>", "<socketPony wrapper passthrough>", "22", "2d", "ClientActions", "ponytownapp settings"], !0, function(t, e, n) {
         "use strict";
         var r = t("<bluebird passthrough>")
           , i = t("<lodash core passthrough>")
           , o = t("<socketPony wrapper passthrough>")
           , a = t("22")
           , s = t("2d")
-          , l = t("2a")
+          , l = t("ClientActions")
           , u = t("ponytownapp settings")
           , c = s.default.game
           , f = function() {
@@ -5422,7 +5422,7 @@ function(System) {
         return n.exports = t("base64 to byte array"),
         n.exports
     }),
-    System.registerDynamic("6b", [], !0, function(t, e, n) {
+    System.registerDynamic("IEEE754", [], !0, function(t, e, n) {
         return e.read = function(t, e, n, r, i) {
             var o, a, s = 8 * i - r - 1, l = (1 << s) - 1, u = l >> 1, c = -7, f = n ? i - 1 : 0, p = n ? -1 : 1, h = t[e + f];
             for (f += p,
@@ -5478,11 +5478,11 @@ function(System) {
         ,
         n.exports
     }),
-    System.registerDynamic("6c", ["6b"], !0, function(t, e, n) {
-        return n.exports = t("6b"),
+    System.registerDynamic("<IEEE754 passthrough>", ["IEEE754"], !0, function(t, e, n) {
+        return n.exports = t("IEEE754"),
         n.exports
     }),
-    System.registerDynamic("6d", [], !0, function(t, e, n) {
+    System.registerDynamic("isArray", [], !0, function(t, e, n) {
         var r = {}.toString;
         return n.exports = Array.isArray || function(t) {
             return "[object Array]" == r.call(t)
@@ -5490,11 +5490,11 @@ function(System) {
         ,
         n.exports
     }),
-    System.registerDynamic("6e", ["6d"], !0, function(t, e, n) {
-        return n.exports = t("6d"),
+    System.registerDynamic("<isArray passthrough>", ["isArray"], !0, function(t, e, n) {
+        return n.exports = t("isArray"),
         n.exports
     }),
-    System.registerDynamic("buffer for the browser", ["<base64 to byte array passthrough>", "6c", "6e"], !0, function(t, e, n) {
+    System.registerDynamic("buffer for the browser", ["<base64 to byte array passthrough>", "<IEEE754 passthrough>", "<isArray passthrough>"], !0, function(t, e, n) {
         "use strict";
         function r() {
             function t() {}
@@ -5911,8 +5911,8 @@ function(System) {
         }
         var G = this
           , X = t("<base64 to byte array passthrough>")
-          , Z = t("6c")
-          , K = t("6e");
+          , Z = t("<IEEE754 passthrough>")
+          , K = t("<isArray passthrough>");
         e.Buffer = o,
         e.SlowBuffer = g,
         e.INSPECT_MAX_BYTES = 50,

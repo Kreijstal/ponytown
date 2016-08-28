@@ -34,8 +34,35 @@ An example JSON for illustration purposes is.
 [{"name":"Example Pony","m":[2,0,"ffd700","b39700","0","1"],"bm":[1,0,"ffd700","b39700","1","1"],"t":[1,0,"ffd700","b39700","1","1"],"cf":"ff0000","co":"8b0000","lco":1,"el":0,"ecl":"daa520","ecr":"daa520","ew":"ffffff","eol":1,"eor":1,"es":0,"esc":"000000","le":1,"lec":1,"fan":0,"mu":0,"fr":0,"cmf":0,"col":0,"id":"{id}","lastUsed":"{last used}"}]
 ```
 ### Requesting status
-We make a get request to api/status and we get the number of servers there are.
+We make a get request to /api/status and we get the number of servers there are.
 
 ```
 {"version":"0.13.2-alpha","servers":[{"id":"main","name":"18+ server [R]","desc":"No restrictions on language or player interactions","offline":false,"online":249},{"id":"safe","name":"Safe server [PG]","desc":"No swearing or adult topics are allowed","offline":false,"online":219}]}
 ```
+
+### 'Saving' a pony.
+When we want to join a game, we make a request to save a pony to /api/pony/save , we send a JSON object of the pony we made.
+As a reply we get the compressed version of this JSON object. In this JSON object we receive our pony id.
+
+### Joining a server.
+We request to join a server to /api/game/join, we send a JSON object with the id of the server we want to join, we receive the URL of the websocket , the token access and other kids of metadata, it's left as an excercise to the reader to find out what each field does.
+
+Rquest Example:
+
+```
+{"serverId":{server id},"ponyId":"{My pony Id}"}
+
+```
+
+Reply Example:
+
+```
+{"token":"{token}","connectionTokens":true,"tokenLifetime":3600000,"pingInterval":5000,"connectionTimeout":10000,"reconnectTimeout":500,"transferLimit":2000,"path":"{url}","perMessageDeflate":false,"client":["map",["subscribeRegion",{"binary":[1,1,[1]]}],["unsubscribeRegion",{"binary":[1,1]}],["updateTile",{"binary":[3,3,1]}],["myEntityId",{"binary":[5]}],["addEntities",{"binary":[[5,9,10,6,6,6,6,1]]}],["addEntity",{"binary":[5,9,10,6,6,6,6,1]}],["updateEntities",{"binary":[[5,6,6,6,6,1],[5]]}],"updateEntityOptions","says","left"],"server":[["say",{"rateLimit":500}],["interact",{"rateLimit":500,"binary":[5]}],["update",{"binary":[5,5]}],["changeTile",{"rateLimit":300,"binary":[3,3]}],"leave"],"hash":1471995757993,"clientLimit":0}
+```
+
+Websocket Protocol
+--------------------
+
+The request url for the websocket as received from /api/game/join is used to create the websocket connection.
+called like this {url}?t={token}
+We then proceed to connect to the server.
