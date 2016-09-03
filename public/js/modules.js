@@ -1286,11 +1286,11 @@ function(System) {
         return n.exports = t("socketPony wrapper"),
         n.exports
     }),
-    System.registerDynamic("1f", ["20", "21", "22", "23", "24"], !0, function(t, e, n) {
+    System.registerDynamic("1f", ["20", "21", "gameDraw Methods&general misc functions", "23", "24"], !0, function(t, e, n) {
         "use strict";
         var r = t("20")
           , i = t("21")
-          , o = t("22")
+          , o = t("gameDraw Methods&general misc functions")
           , a = t("23")
           , s = t("24")
           , l = function() {
@@ -1468,7 +1468,7 @@ function(System) {
         return e.Animated = o,
         n.exports
     }),
-    System.registerDynamic("27", ["<lodash core passthrough>", "20", "22", "21", "24"], !0, function(t, e, n) {
+    System.registerDynamic("27", ["<lodash core passthrough>", "20", "gameDraw Methods&general misc functions", "21", "24"], !0, function(t, e, n) {
         "use strict";
         function r(t, e, n) {
             return {
@@ -1606,7 +1606,7 @@ function(System) {
         }
         var y = t("<lodash core passthrough>")
           , b = t("20")
-          , _ = t("22")
+          , _ = t("gameDraw Methods&general misc functions")
           , w = t("21")
           , x = t("24")
           , $ = "undefined" != typeof window;
@@ -1639,7 +1639,7 @@ function(System) {
         e.containsCyrillic = i,
         n.exports
     }),
-    System.registerDynamic("ClientActions", ["<socketPony wrapper passthrough>", "22", "21", "2b", "2c", "1f", "25", "26", "27", "20", "2d", "29", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("ClientActions", ["<socketPony wrapper passthrough>", "gameDraw Methods&general misc functions", "21", "2b", "2c", "1f", "25", "26", "27", "20", "2d", "29", "ponytownapp settings"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return y.account.settings.filterSwearWords ? g.filterBadWords(t) : t
@@ -1659,7 +1659,7 @@ function(System) {
                 return Reflect.metadata(t, e)
         }
           , a = t("<socketPony wrapper passthrough>")
-          , s = t("22")
+          , s = t("gameDraw Methods&general misc functions")
           , l = t("21")
           , u = t("2b")
           , c = t("2c")
@@ -1860,12 +1860,12 @@ function(System) {
         return e.ClientActions = x,
         n.exports
     }),
-    System.registerDynamic("game service", ["<bluebird passthrough>", "<lodash core passthrough>", "<socketPony wrapper passthrough>", "22", "2d", "ClientActions", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("game service", ["<bluebird passthrough>", "<lodash core passthrough>", "<socketPony wrapper passthrough>", "gameDraw Methods&general misc functions", "2d", "ClientActions", "ponytownapp settings"], !0, function(t, e, n) {
         "use strict";
         var r = t("<bluebird passthrough>")
           , i = t("<lodash core passthrough>")
           , o = t("<socketPony wrapper passthrough>")
-          , a = t("22")
+          , a = t("gameDraw Methods&general misc functions")
           , s = t("2d")
           , l = t("ClientActions")
           , u = t("ponytownapp settings")
@@ -1966,7 +1966,7 @@ function(System) {
         return e.GameService = f,
         n.exports
     }),
-    System.registerDynamic("30", ["<bluebird passthrough>", "<lodash core passthrough>", "22", "31", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("30", ["<bluebird passthrough>", "<lodash core passthrough>", "gameDraw Methods&general misc functions", "31", "ponytownapp settings"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return t.length ? t[0] : l.createDefaultPony()
@@ -1976,7 +1976,7 @@ function(System) {
         }
         var o = t("<bluebird passthrough>")
           , a = t("<lodash core passthrough>")
-          , s = t("22")
+          , s = t("gameDraw Methods&general misc functions")
           , l = t("31")
           , u = t("ponytownapp settings")
           , c = function() {
@@ -2073,9 +2073,9 @@ function(System) {
         return e.Model = c,
         n.exports
     }),
-    System.registerDynamic("32", ["22"], !0, function(t, e, n) {
+    System.registerDynamic("32", ["gameDraw Methods&general misc functions"], !0, function(t, e, n) {
         "use strict";
-        var r = t("22")
+        var r = t("gameDraw Methods&general misc functions")
           , i = {
             left: 0,
             top: 0
@@ -2180,9 +2180,9 @@ function(System) {
         return n.exports = '<div ng-class="{ disabled: vm.isDisabled }" class="color-picker"><div ng-style="{ background: vm.bg }" class="color-picker-box"></div><input type="text" ng-focus="vm.focus($event)" ng-blur="vm.open = false" ng-model="vm.inputColor" ng-disabled="vm.isDisabled" spellcheck="false" ng-change="vm.inputChanged()" class="form-control"><div ng-class="{ open: vm.open }" class="dropdown"><div ng-mousedown="$event.stopPropagation(); $event.preventDefault();" class="dropdown-menu dropdown-menu-right color-picker-menu"><div class="color-picker-content"><div ag-drag="vm.dragSV($event)" ag-drag-relative="self" class="color-picker-sv"><div ng-style="{ background: vm.hue }" class="color-picker-sv-bg"><div class="color-picker-sv-overlay-white"><div class="color-picker-sv-overlay-black"></div></div></div><div ng-style="{ left: vm.svLeft + \'%\', top: vm.svTop + \'%\' }" class="color-wheel-circle-sv"><div></div></div></div><div ag-drag="vm.dragHue($event)" ag-drag-relative="self" class="color-picker-hue"><div ng-style="{ top: vm.hueTop + \'%\' }" class="color-wheel-circle-hue"><div></div></div></div></div></div></div></div>',
         n.exports
     }),
-    System.registerDynamic("34", ["22", "35", "33"], !0, function(t, e, n) {
+    System.registerDynamic("colorPickerComponent", ["gameDraw Methods&general misc functions", "35", "33"], !0, function(t, e, n) {
         "use strict";
-        var r = t("22")
+        var r = t("gameDraw Methods&general misc functions")
           , i = t("35")
           , o = 175
           , a = function() {
@@ -2317,7 +2317,7 @@ function(System) {
         },
         n.exports
     }),
-    System.registerDynamic("36", [], !0, function(t, e, n) {
+    System.registerDynamic("checkBoxComponent", [], !0, function(t, e, n) {
         "use strict";
         var r = function() {
             function t() {}
@@ -2350,7 +2350,7 @@ function(System) {
         return n.exports = '<div class="row form-group"><div class="col-sm-4"><check-box ng-if="vm.hasLock &amp;&amp; !vm.nonLockable" checked="vm.locked" icon="fa-lock" changed="vm.lockChanged($value)" title="Automatic color" class="lock-box"></check-box><label class="control-label text-muted">{{vm.label || \'Color\'}}</label></div><div class="col-sm-8"><color-picker color="vm.fill" is-disabled="vm.locked" changed="vm.fillChanged($value)"></color-picker></div></div><div ng-if="!vm.outlineHidden" class="row form-group"><div class="col-sm-4"><check-box checked="vm.outlineLocked" icon="fa-lock" changed="vm.outlineLockChanged($value)" title="Automatic outline" class="lock-box"></check-box><label class="control-label text-muted">Outline</label></div><div class="col-sm-8"><color-picker color="vm.outline" is-disabled="vm.outlineLocked"></color-picker></div></div>',
         n.exports
     }),
-    System.registerDynamic("38", ["39", "37"], !0, function(t, e, n) {
+    System.registerDynamic("fillOutlineComponent", ["39", "37"], !0, function(t, e, n) {
         "use strict";
         var r = t("39")
           , i = function() {
@@ -2396,7 +2396,7 @@ function(System) {
         },
         n.exports
     }),
-    System.registerDynamic("3a", ["22", "35", "3b"], !0, function(t, e, n) {
+    System.registerDynamic("spriteBoxComponent", ["gameDraw Methods&general misc functions", "35", "3b"], !0, function(t, e, n) {
         "use strict";
         function r(t, e) {
             if (e && 0 !== e.w && 0 !== e.h)
@@ -2429,7 +2429,7 @@ function(System) {
         function a(t, e) {
             return Array.isArray(t) ? t[e] : t
         }
-        var s = t("22")
+        var s = t("gameDraw Methods&general misc functions")
           , l = t("35")
           , u = t("3b")
           , c = 52
@@ -2518,7 +2518,7 @@ function(System) {
         return n.exports = '<div class="selection-list"><div class="selection-list-content"><sprite-box ng-repeat="i in vm.sprites track by $index" ng-class="{ active: vm.selected === $index }" ng-click="vm.selected = $index" sprite="i" fill="vm.fill" outline="vm.outline" circle="vm.circle" class="selection-item"></sprite-box></div></div>',
         n.exports
     }),
-    System.registerDynamic("3d", ["3c"], !0, function(t, e, n) {
+    System.registerDynamic("spriteSelectionComponent", ["3c"], !0, function(t, e, n) {
         "use strict";
         var r = function() {
             function t() {}
@@ -2545,7 +2545,7 @@ function(System) {
         return n.exports = '<div ng-if="vm.compact"><div class="row form-group"><div class="col-sm-4"><label class="control-label">{{vm.label}}</label></div><div class="col-sm-8"><sprite-selection selected="vm.set.type" sprites="vm.sprites" fill="vm.set.fills[0]" outline="vm.set.outlines[0]"></sprite-selection></div></div></div><div ng-if="!vm.compact"><div class="row form-group"><div class="col-sm-12 text-center"><label class="control-label text-muted">{{vm.label}}</label></div></div><div class="row form-group"><div class="col-sm-12"><sprite-selection selected="vm.set.type" sprites="vm.sprites" fill="vm.set.fills[0]" outline="vm.set.outlines[0]"></sprite-selection></div></div></div><div ng-if="vm.set.type &amp;&amp; vm.sets[vm.set.type].length &gt; 1"><div class="row form-group"><div class="col-sm-12 text-center"><label class="control-label text-muted">Color pattern</label></div></div><div class="row form-group"><div class="col-sm-12"><sprite-selection selected="vm.set.pattern" sprites="vm.sets[vm.set.type]" fill="vm.exampleFills" outline="vm.exampleOutlines"></sprite-selection></div></div></div><fill-outline ng-repeat="c in vm.set.fills track by $index" ng-if="vm.patternColors &gt; $index" label="Color {{$index + 1}}" base="vm.base" outline-hidden="vm.outlineHidden" fill="vm.set.fills[$index]" locked="vm.set.lockFills[$index]" non-lockable="$index === 0 &amp;&amp; vm.nonLockable" outline="vm.set.outlines[$index]" outline-locked="vm.set.lockOutlines[$index]"></fill-outline>',
         n.exports
     }),
-    System.registerDynamic("3f", ["3e"], !0, function(t, e, n) {
+    System.registerDynamic("spriteSetSelectionComponent", ["3e"], !0, function(t, e, n) {
         "use strict";
         var r = function() {
             function t() {
@@ -2587,7 +2587,7 @@ function(System) {
         },
         n.exports
     }),
-    System.registerDynamic("40", ["35"], !0, function(t, e, n) {
+    System.registerDynamic("bitmapBoxComponent", ["35"], !0, function(t, e, n) {
         "use strict";
         var r = t("35")
           , i = function() {
@@ -2630,9 +2630,9 @@ function(System) {
         },
         n.exports
     }),
-    System.registerDynamic("41", ["22", "31", "42", "43", "44"], !0, function(t, e, n) {
+    System.registerDynamic("characterPreviewComponent", ["gameDraw Methods&general misc functions", "31", "42", "43", "44"], !0, function(t, e, n) {
         "use strict";
-        var r = t("22")
+        var r = t("gameDraw Methods&general misc functions")
           , i = t("31")
           , o = t("42")
           , a = t("43")
@@ -2699,7 +2699,7 @@ function(System) {
         return n.exports = '<div class="chat-box"><i ng-click="vm.toggle()" class="fa fa-fw fa-comment chat-open-button game-button"></i><div ng-show="vm.isOpen" class="chat-input-box"><input ng-model="vm.message" ng-keydown="vm.keydown($event)" maxlength="{{::vm.maxSayLength}}" class="chat-input"><i ng-click="vm.send()" class="fa fa-fw fa-angle-double-right chat-send-button game-button"></i></div></div>',
         n.exports
     }),
-    System.registerDynamic("46", ["21", "2d", "45"], !0, function(t, e, n) {
+    System.registerDynamic("chatBoxComponent", ["21", "2d", "45"], !0, function(t, e, n) {
         "use strict";
         var r = t("21")
           , i = t("2d")
@@ -2779,10 +2779,10 @@ function(System) {
         },
         n.exports
     }),
-    System.registerDynamic("2b", ["48", "22", "21", "43", "31", "47"], !0, function(t, e, n) {
+    System.registerDynamic("2b", ["48", "gameDraw Methods&general misc functions", "21", "43", "31", "47"], !0, function(t, e, n) {
         "use strict";
         var r = t("48")
-          , i = t("22")
+          , i = t("gameDraw Methods&general misc functions")
           , o = t("21")
           , a = t("43")
           , s = t("31")
@@ -2869,10 +2869,10 @@ function(System) {
         e.TILE_MAP = [46, 46, 22, 22, 46, 46, 22, 22, 21, 21, 17, 11, 21, 21, 17, 11, 19, 19, 18, 18, 19, 19, 12, 12, 14, 14, 24, 28, 14, 14, 30, 6, 46, 46, 22, 22, 46, 46, 22, 22, 21, 21, 17, 11, 21, 21, 17, 11, 19, 19, 18, 18, 19, 19, 12, 12, 14, 14, 24, 28, 14, 14, 30, 6, 20, 20, 13, 13, 20, 20, 13, 13, 16, 16, 23, 32, 16, 16, 23, 32, 15, 15, 25, 25, 15, 15, 34, 34, 26, 26, 45, 41, 26, 26, 42, 36, 20, 20, 13, 13, 20, 20, 13, 13, 10, 10, 31, 4, 10, 10, 31, 4, 15, 15, 25, 25, 15, 15, 34, 34, 27, 27, 43, 37, 27, 27, 35, 5, 46, 46, 22, 22, 46, 46, 22, 22, 21, 21, 17, 11, 21, 21, 17, 11, 19, 19, 18, 18, 19, 19, 12, 12, 14, 14, 24, 28, 14, 14, 30, 6, 46, 46, 22, 22, 46, 46, 22, 22, 21, 21, 17, 11, 21, 21, 17, 11, 19, 19, 18, 18, 19, 19, 12, 12, 14, 14, 24, 28, 14, 14, 30, 6, 20, 20, 13, 13, 20, 20, 13, 13, 16, 16, 23, 32, 16, 16, 23, 32, 9, 9, 33, 33, 9, 9, 8, 8, 29, 29, 44, 39, 29, 29, 38, 7, 20, 20, 13, 13, 20, 20, 13, 13, 10, 10, 31, 4, 10, 10, 31, 4, 9, 9, 33, 33, 9, 9, 8, 8, 2, 2, 40, 3, 2, 2, 1, 0],
         n.exports
     }),
-    System.registerDynamic("2c", ["21", "22", "23"], !0, function(t, e, n) {
+    System.registerDynamic("2c", ["21", "gameDraw Methods&general misc functions", "23"], !0, function(t, e, n) {
         "use strict";
         var r = t("21")
-          , i = t("22")
+          , i = t("gameDraw Methods&general misc functions")
           , o = t("23")
           , a = function() {
             function t(t, e) {
@@ -3096,10 +3096,10 @@ function(System) {
         return e.Map = a,
         n.exports
     }),
-    System.registerDynamic("49", ["21", "22"], !0, function(t, e, n) {
+    System.registerDynamic("49", ["21", "gameDraw Methods&general misc functions"], !0, function(t, e, n) {
         "use strict";
         var r = t("21")
-          , i = t("22")
+          , i = t("gameDraw Methods&general misc functions")
           , o = function() {
             function t() {
                 this.x = 0,
@@ -3451,7 +3451,7 @@ function(System) {
         return n.exports = t("52"),
         n.exports
     }),
-    System.registerDynamic("54", ["4e", "55", "53", "22", "24"], !0, function(t, e, n) {
+    System.registerDynamic("54", ["4e", "55", "53", "gameDraw Methods&general misc functions", "24"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             for (var e = t * p, n = new Uint16Array(e), r = 0, i = 0; r < e; i += 4)
@@ -3479,7 +3479,7 @@ function(System) {
         var o = t("4e")
           , a = t("55")
           , s = t("53")
-          , l = t("22")
+          , l = t("gameDraw Methods&general misc functions")
           , u = t("24")
           , c = 1e4
           , f = 16
@@ -3680,9 +3680,9 @@ function(System) {
         return e.SpriteButton = o,
         n.exports
     }),
-    System.registerDynamic("57", ["22"], !0, function(t, e, n) {
+    System.registerDynamic("57", ["gameDraw Methods&general misc functions"], !0, function(t, e, n) {
         "use strict";
-        var r = t("22")
+        var r = t("gameDraw Methods&general misc functions")
           , i = " ".charCodeAt(0)
           , o = "\t".charCodeAt(0)
           , a = "?".charCodeAt(0)
@@ -12435,7 +12435,7 @@ function(System) {
         e.createSpriteShader = o,
         n.exports
     }),
-    System.registerDynamic("42", ["22"], !0, function(t, e, n) {
+    System.registerDynamic("42", ["gameDraw Methods&general misc functions"], !0, function(t, e, n) {
         "use strict";
         function r(t, e, n) {
             t.width === e && t.height === n || (t.width = e,
@@ -12453,7 +12453,7 @@ function(System) {
             r(t, e, n),
             t
         }
-        var a = t("22");
+        var a = t("gameDraw Methods&general misc functions");
         return e.resizeCanvas = r,
         e.resizeCanvasToElementSize = i,
         e.createOrResizeCanvas = o,
@@ -12551,7 +12551,7 @@ function(System) {
         return e.MouseController = i,
         n.exports
     }),
-    System.registerDynamic("aa", ["22"], !0, function(t, e, n) {
+    System.registerDynamic("aa", ["gameDraw Methods&general misc functions"], !0, function(t, e, n) {
         "use strict";
         function r(t, e) {
             for (var n = 0; n < t.changedTouches.length; ++n) {
@@ -12561,7 +12561,7 @@ function(System) {
             }
             return null
         }
-        var i = t("22")
+        var i = t("gameDraw Methods&general misc functions")
           , o = function() {
             function t(t) {
                 this.manager = t,
@@ -12872,7 +12872,7 @@ function(System) {
         e.getTime = i,
         n.exports
     }),
-    System.registerDynamic("ae", ["48", "22", "21", "2b", "2c", "49", "24", "54", "56", "57", "74", "a6", "20", "3b", "42", "rollbar config", "ponytownapp settings", "ac", "ad"], !0, function(t, e, n) {
+    System.registerDynamic("ae", ["48", "gameDraw Methods&general misc functions", "21", "2b", "2c", "49", "24", "54", "56", "57", "74", "a6", "20", "3b", "42", "rollbar config", "ponytownapp settings", "ac", "ad"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return 2 === t ? f.ADMIN_COLOR : 1 === t ? f.SYSTEM_COLOR : f.WHITE
@@ -12881,7 +12881,7 @@ function(System) {
             t.player && t.player.tes && t.player.tes()
         }
         var o = t("48")
-          , a = t("22")
+          , a = t("gameDraw Methods&general misc functions")
           , s = t("21")
           , l = t("2b")
           , u = t("2c")
@@ -13191,7 +13191,7 @@ function(System) {
         return n.exports = '<div uib-dropdown is-open="vm.dropdownOpen" class="settings-box"><span id="clock" class="settings-clock">00:00</span><i uib-dropdown-toggle class="fa fa-fw fa-gear game-button"></i><ul uib-dropdown-menu ng-if="vm.dropdownOpen" class="dropdown-menu pull-right"><li ng-mouseup="$event.stopPropagation(); $event.preventDefault();" ng-click="$event.stopPropagation(); $event.preventDefault();"><a ng-click="vm.changeScale()"><i class="fa fa-fw fa-search"></i> Change scale (x{{vm.scale}})</a></li><li class="divider"></li><li><a ng-click="vm.leave()"><i class="fa fa-fw fa-sign-out"></i> Leave</a></li></ul></div>',
         n.exports
     }),
-    System.registerDynamic("b0", ["2d", "af"], !0, function(t, e, n) {
+    System.registerDynamic("settingsBoxComponent", ["2d", "af"], !0, function(t, e, n) {
         "use strict";
         var r = t("2d")
           , i = r.default.game
@@ -13242,7 +13242,7 @@ function(System) {
         return n.exports = '<li ng-if="vm.model.account" uib-dropdown><a uib-dropdown-toggle class="cursor-pointer">{{vm.model.account.name}} <span class="caret"></span></a><ul uib-dropdown-menu><li><a href="/account">Account settings</a></li><li><a href="/auth/sign-out" target="_self" class="cursor-pointer">Sign out</a></li></ul></li>',
         n.exports
     }),
-    System.registerDynamic("b2", ["b1"], !0, function(t, e, n) {
+    System.registerDynamic("accountButtonComponent", ["b1"], !0, function(t, e, n) {
         "use strict";
         var r = function() {
             function t(t, e) {
@@ -13267,7 +13267,7 @@ function(System) {
         return n.exports = '<nav class="navbar navbar-inverse"><div class="navbar-header navbar-main"><button ng-click="vm.menuExpanded = !vm.menuExpanded" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a ng-if="vm.logo" href="/" ag-active-link class="main-logo-small hidden-xs"><img src="/images/logo-small.png"></a></div><div uib-collapse="!vm.menuExpanded" class="collapse navbar-collapse"><form ng-if="!vm.model.account" class="navbar-form navbar-right"><div uib-dropdown class="button-group"><button uib-dropdown-toggle class="btn btn-default">Sign in <span class="caret"></span></button><ul uib-dropdown-menu><li ng-repeat="p in vm.providers"><a ng-href="{{p.url}}" target="_self"><i ng-class="p.icon" class="fa fa-fw"></i> {{p.name}}</a></li></ul></div></form><ul class="nav navbar-nav navbar-right"><ng-transclude></ng-transclude><li ag-active-link ng-repeat="i in vm.items" class="navbar-link"><a ng-href="{{i.href}}">{{i.name}}</a></li><li ng-if="vm.model.account" uib-dropdown><a uib-dropdown-toggle class="cursor-pointer">{{vm.model.account.name}} <span class="caret"></span></a><ul uib-dropdown-menu><li><a href="/account">Account settings</a></li><li><a href="/auth/sign-out" target="_self" class="cursor-pointer">Sign out</a></li></ul></li></ul></div></nav>',
         n.exports
     }),
-    System.registerDynamic("b4", ["ponytownapp settings", "b3"], !0, function(t, e, n) {
+    System.registerDynamic("menuComponent", ["ponytownapp settings", "b3"], !0, function(t, e, n) {
         "use strict";
         var r = t("ponytownapp settings")
           , i = function() {
@@ -13319,7 +13319,7 @@ function(System) {
         return n.exports = '<div class="sign-in-box center-block"><div class="text-center"><p class="lead">Sign in with your social site account</p><div class="sign-in-box-providers"><a ng-repeat="p in vm.providers" ng-href="{{p.url}}" target="_self" title="{{p.name}}" ng-style="{ borderBottomColor: p.disabled ? \'#666\' : p.color }" ng-class="{ disabled: p.disabled }" class="btn btn-lg btn-provider"><i ng-class="p.icon" class="fa fa-fw fa-lg"></i></a></div></div></div>',
         n.exports
     }),
-    System.registerDynamic("b6", ["ponytownapp settings", "b5"], !0, function(t, e, n) {
+    System.registerDynamic("signInBoxComponent", ["ponytownapp settings", "b5"], !0, function(t, e, n) {
         "use strict";
         var r = t("ponytownapp settings")
           , i = function() {
@@ -13342,9 +13342,9 @@ function(System) {
         return n.exports = '<div class="play-box"><div uib-dropdown class="form-group btn-group dropdown"><button ng-if="!vm.joining" ng-click="vm.play()" ng-disabled="!vm.canPlay" type="button" class="btn btn-lg btn-success play-box-btn"><span ng-if="vm.server"><strong>{{vm.label || \'Play\'}}</strong> on<span> {{vm.server.name}}</span></span><span ng-if="!vm.server" class="text-faded">select server to play</span></button><button ng-if="vm.joining" ng-click="vm.cancel()" type="button" class="btn btn-lg btn-success play-box-btn"><i class="fa fa-spinner fa-spin"></i> Cancel</button><button uib-dropdown-toggle class="btn btn-lg btn-success"><span class="caret"></span></button><ul uib-dropdown-menu style="width: 100%;" class="dropdown-menu"><li ng-repeat="s in vm.servers"><a ng-click="vm.server = s"><div ng-if="s.offline" class="pull-right text-unsafe">offline</div><div ng-if="!s.offline" class="pull-right text-muted">online ({{s.online}})</div><strong>{{s.name}}</strong><div class="text-muted text-wrap">{{s.desc}}</div></a></li></ul></div><div ng-if="vm.server.offline" class="form-group"><div class="alert alert-info">Selected server is offline, try again later</div></div><div ng-if="vm.offline" class="form-group"><div class="alert alert-info">Server is offline, try again later</div></div><div ng-if="vm.invalidVersion &amp;&amp; !vm.offline" class="form-group"><div class="alert alert-info">Your client version is outdated, <a ng-click="vm.reload()" class="alert-link">reload</a> to be able to play.</div></div><div ng-if="vm.error" class="form-group"><div class="alert alert-danger">{{vm.error}}</div></div><div ng-if="vm.server" class="form-group text-left"><h4>Server rules</h4><p class="text-muted">{{vm.server.desc}}</p></div></div>',
         n.exports
     }),
-    System.registerDynamic("b8", ["22", "ponytownapp settings", "b7"], !0, function(t, e, n) {
+    System.registerDynamic("playBoxComponent", ["gameDraw Methods&general misc functions", "ponytownapp settings", "b7"], !0, function(t, e, n) {
         "use strict";
-        var r = t("22")
+        var r = t("gameDraw Methods&general misc functions")
           , i = t("ponytownapp settings")
           , o = function() {
             function t(t, e, n) {
@@ -13431,48 +13431,48 @@ function(System) {
         },
         n.exports
     }),
-    System.registerDynamic("ponytown init", ["<bluebird passthrough>", "amd momentjs passthrough", "rollbar config", "ponytownapp settings", "game service", "30", "32", "34", "36", "38", "3a", "3d", "3f", "40", "41", "46", "b0", "b2", "b4", "b6", "b8"], !0, function(t, e, n) {
+    System.registerDynamic("ponytown init", ["<bluebird passthrough>", "amd momentjs passthrough", "rollbar config", "ponytownapp settings", "game service", "30", "32", "colorPickerComponent", "checkBoxComponent", "fillOutlineComponent", "spriteBoxComponent", "spriteSelectionComponent", "spriteSetSelectionComponent", "bitmapBoxComponent", "characterPreviewComponent", "chatBoxComponent", "settingsBoxComponent", "accountButtonComponent", "menuComponent", "signInBoxComponent", "playBoxComponent"], !0, function(require, exports, module) {
         "use strict";
-        function r(t) {
-            s.account && a.configureUser({
-                id: s.account.id,
-                username: s.account.name
+        function PonyTownInit(angularModule) {
+            PonyTownAppSettings.account && a.configureUser({
+                id: PonyTownAppSettings.account.id,
+                username: PonyTownAppSettings.account.name
             }),
-            t.run(["$rootScope", function(t) {
-                i.setScheduler(function(e) {
-                    t.$evalAsync(e)
+            angularModule.run(["$rootScope", function($rootScope) {
+                BlueBirdPromise.setScheduler(function(e) {
+                    $rootScope.$evalAsync(e)
                 })
             }
             ]),
-            t.config(["$uibTooltipProvider", function(t) {
-                t.options({
+            angularModule.config(["$uibTooltipProvider", function($uibTooltipProvider) {
+                $uibTooltipProvider.options({
                     appendToBody: !0
                 })
             }
             ]),
-            t.filter("fromNow", function() {
+            angularModule.filter("fromNow", function() {
                 var t = function(t, e) {
-                    return o(t).fromNow(e)
+                    return MomentJS(t).fromNow(e)
                 };
                 return t.$stateful = !0,
                 t
             }),
-            t.service("gameService", l.GameService),
-            t.service("model", u.Model),
-            t.service("applyCallback", ["$rootScope", function(t) {
+            angularModule.service("gameService", game_service.GameService),
+            angularModule.service("model", u.Model),
+            angularModule.service("applyCallback", ["$rootScope", function($rootScope) {
                 return function(e) {
-                    t.$$phase ? e() : t.$apply(e)
+                    $rootScope.$$phase ? e() : $rootScope.$apply(e)
                 }
             }
             ]),
-            t.directive("agDrag", c.default),
-            t.directive("agActiveLink", ["$location", function(t) {
+            angularModule.directive("agDrag", c.default),
+            angularModule.directive("agActiveLink", ["$location", function($location) {
                 return {
                     restrict: "A",
                     link: function(e, n, r) {
                         function i() {
                             var e = r.href || o.getAttribute("href");
-                            e === t.absUrl().replace(/^https?:\/\/[^\/]+/, "") ? n.addClass("active") : n.removeClass("active")
+                            e === $location.absUrl().replace(/^https?:\/\/[^\/]+/, "") ? n.addClass("active") : n.removeClass("active")
                         }
                         var o = r.href ? null : n[0].children.item(0);
                         e.$on("$routeChangeSuccess", i),
@@ -13481,7 +13481,7 @@ function(System) {
                 }
             }
             ]),
-            t.directive("agAutoFocus", function() {
+            angularModule.directive("agAutoFocus", function() {
                 return {
                     restrict: "A",
                     link: function(t, e) {
@@ -13491,7 +13491,7 @@ function(System) {
                     }
                 }
             }),
-            t.directive("a", function() {
+            angularModule.directive("a", function() {
                 return {
                     restrict: "E",
                     link: function(t, e, n) {
@@ -13500,45 +13500,45 @@ function(System) {
                     }
                 }
             }),
-            t.component("colorPicker", f.default),
-            t.component("checkBox", p.default),
-            t.component("fillOutline", h.default),
-            t.component("spriteBox", d.default),
-            t.component("spriteSelection", m.default),
-            t.component("spriteSetSelection", v.default),
-            t.component("bitmapBox", g.default),
-            t.component("characterPreview", y.default),
-            t.component("chatBox", b.default),
-            t.component("settingsBox", _.default),
-            t.component("accountButton", w.default),
-            t.component("menuBar", x.menuBar),
-            t.component("menuItem", x.menuItem),
-            t.component("signInBox", $.default),
-            t.component("playBox", E.default)
+            angularModule.component("colorPicker", colorPickerComponent.default),
+            angularModule.component("checkBox", checkBoxComponent.default),
+            angularModule.component("fillOutline", fillOutlineComponent.default),
+            angularModule.component("spriteBox", spriteBoxComponent.default),
+            angularModule.component("spriteSelection", spriteSelectionComponent.default),
+            angularModule.component("spriteSetSelection", spriteSetSelectionComponent.default),
+            angularModule.component("bitmapBox", bitmapBoxComponent.default),
+            angularModule.component("characterPreview", characterPreviewComponent.default),
+            angularModule.component("chatBox", chatBoxComponent.default),
+            angularModule.component("settingsBox", settingsBoxComponent.default),
+            angularModule.component("accountButton", accountButtonComponent.default),
+            angularModule.component("menuBar", menuComponent.menuBar),
+            angularModule.component("menuItem", menuComponent.menuItem),
+            angularModule.component("signInBox", signInBoxComponent.default),
+            angularModule.component("playBox", playBoxComponent.default)
         }
-        var i = t("<bluebird passthrough>")
-          , o = t("amd momentjs passthrough")
-          , a = t("rollbar config")
-          , s = t("ponytownapp settings")
-          , l = t("game service")
-          , u = t("30")
-          , c = t("32")
-          , f = t("34")
-          , p = t("36")
-          , h = t("38")
-          , d = t("3a")
-          , m = t("3d")
-          , v = t("3f")
-          , g = t("40")
-          , y = t("41")
-          , b = t("46")
-          , _ = t("b0")
-          , w = t("b2")
-          , x = t("b4")
-          , $ = t("b6")
-          , E = t("b8");
-        return e.init = r,
-        n.exports
+        var BlueBirdPromise = require("<bluebird passthrough>")
+          , MomentJS = require("amd momentjs passthrough")
+          , a = require("rollbar config")
+          , PonyTownAppSettings = require("ponytownapp settings")
+          , game_service = require("game service")
+          , u = require("30")
+          , c = require("32")
+          , colorPickerComponent = require("colorPickerComponent")
+          , checkBoxComponent = require("checkBoxComponent")
+          , fillOutlineComponent = require("fillOutlineComponent")
+          , spriteBoxComponent = require("spriteBoxComponent")
+          , spriteSelectionComponent = require("spriteSelectionComponent")
+          , spriteSetSelectionComponent = require("spriteSetSelectionComponent")
+          , bitmapBoxComponent = require("bitmapBoxComponent")
+          , characterPreviewComponent = require("characterPreviewComponent")
+          , chatBoxComponent = require("chatBoxComponent")
+          , settingsBoxComponent = require("settingsBoxComponent")
+          , accountButtonComponent = require("accountButtonComponent")
+          , menuComponent = require("menuComponent")
+          , signInBoxComponent = require("signInBoxComponent")
+          , playBoxComponent = require("playBoxComponent");
+        return exports.init = PonyTownInit,
+        module.exports
     }),
     System.registerDynamic("ba", [], !0, function(t, e, n) {
         return n.exports = '<div ng-init="vm.init()" class="app"><div ng-style="{ display: vm.playing ? \'block\' : \'none\' }" class="app-game"><canvas id="canvas"></canvas><span id="stats"></span><settings-box></settings-box><chat-box></chat-box><div id="touch-origin"></div><div id="touch-position"></div></div><div ng-if="!vm.playing" class="app-cover fadeview"><div class="container"><menu-bar logo="true"><menu-item href="/" name="Home"></menu-item><menu-item href="/about" name="About"></menu-item><menu-item ng-if="vm.model.account" href="/character" name="Characters"></menu-item></menu-bar><div><div ng-view class="app-view"></div></div><footer class="app-footer clearfix"><div class="pull-left text-muted text-nowrap">version <b>0.13.2-alpha</b></div><div class="pull-right text-muted text-nowrap">&copy; 2016 <a href="mailto:agamnentzar&#64;gmail.com" class="text-muted">Agamnentzar</a> | <a href="http://agamnentzar.deviantart.com/" title="DeviantArt" class="text-muted"><i class="fa fa-deviantart"></i></a> <a href="http://agamnentzar.tumblr.com/" title="Tumblr" class="text-muted"><i class="fa fa-tumblr"></i></a> <a href="https://twitter.com/Agamnentzar" title="Twitter" class="text-muted"><i class="fa fa-twitter"></i></a> <a href="https://github.com/Agamnentzar" title="Github" class="text-muted"><i class="fa fa-github"></i></a></div></footer></div></div></div>',
@@ -13553,11 +13553,11 @@ function(System) {
         return e.loadSpriteSheets = r,
         n.exports
     }),
-    System.registerDynamic("bb", ["<lodash core passthrough>", "21", "22", "43", "31", "20", "44", "47", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("bb", ["<lodash core passthrough>", "21", "gameDraw Methods&general misc functions", "43", "31", "20", "44", "47", "ponytownapp settings"], !0, function(t, e, n) {
         "use strict";
         var r = t("<lodash core passthrough>")
           , i = t("21")
-          , o = t("22")
+          , o = t("gameDraw Methods&general misc functions")
           , a = t("43")
           , s = t("31")
           , l = t("20")
@@ -13808,11 +13808,11 @@ function(System) {
         e.default = h,
         n.exports
     }),
-    System.registerDynamic("bc", ["<lodash core passthrough>", "21", "22"], !0, function(t, e, n) {
+    System.registerDynamic("bc", ["<lodash core passthrough>", "21", "gameDraw Methods&general misc functions"], !0, function(t, e, n) {
         "use strict";
         var r = t("<lodash core passthrough>")
           , i = t("21")
-          , o = t("22")
+          , o = t("gameDraw Methods&general misc functions")
           , a = function() {
             function t(t, e, n) {
                 var r = this;
@@ -13874,7 +13874,7 @@ function(System) {
         e.darkenColor = o,
         n.exports
     }),
-    System.registerDynamic("31", ["<lodash core passthrough>", "20", "22", "39", "21", "35"], !0, function(t, e, n) {
+    System.registerDynamic("31", ["<lodash core passthrough>", "20", "gameDraw Methods&general misc functions", "39", "21", "35"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return T.mergeWith({}, a(), T.cloneDeep(t), function(t, e) {
@@ -14144,7 +14144,7 @@ function(System) {
         }
         var T = t("<lodash core passthrough>")
           , A = t("20")
-          , D = t("22")
+          , D = t("gameDraw Methods&general misc functions")
           , C = t("39")
           , I = t("21")
           , O = t("35");
@@ -14686,7 +14686,7 @@ function(System) {
         } : localStorage,
         n.exports
     }),
-    System.registerDynamic("22", ["<bluebird passthrough>", "<lodash core passthrough>", "21"], !0, function(t, e, n) {
+    System.registerDynamic("gameDraw Methods&general misc functions", ["<bluebird passthrough>", "<lodash core passthrough>", "21"], !0, function(t, e, n) {
         "use strict";
         function r(t) {
             return new RegExp("^" + G.escapeRegExp((t || "").trim()) + "$","i")
@@ -14800,11 +14800,11 @@ function(System) {
                 t.error = e.message
             }
         }
-        function k(t) {
+        function onRequestError(t) {
             throw new Error(t.data || (403 === t.status ? "Access denied" : "Server is offline"))
         }
         function T(t) {
-            return W.resolve(t).catch(k).then(function(t) {
+            return W.resolve(t).catch(onRequestError).then(function(t) {
                 return t.data
             })
         }
@@ -14956,7 +14956,7 @@ function(System) {
         e.fromSurrogate = E,
         e.randomString = S,
         e.errorHandler = M,
-        e.handleReject = k,
+        e.handleReject = onRequestError,
         e.toPromise = T,
         e.getPixelRatio = A,
         e.createCanvas = D,
@@ -14983,7 +14983,7 @@ function(System) {
         e.getY = q,
         n.exports
     }),
-    System.registerDynamic("3b", ["<bluebird passthrough>", "35", "22"], !0, function(t, e, n) {
+    System.registerDynamic("3b", ["<bluebird passthrough>", "35", "gameDraw Methods&general misc functions"], !0, function(t, e, n) {
         "use strict";
         function r(t, e) {
             var n = Object.keys(t).reduce(function(e, n) {
@@ -15046,7 +15046,7 @@ function(System) {
         }
         var u = t("<bluebird passthrough>")
           , c = t("35")
-          , f = t("22");
+          , f = t("gameDraw Methods&general misc functions");
         e.loadSprites = r,
         e.loadSpriteSheets = o,
         e.drawSprite = a;
@@ -17625,7 +17625,7 @@ function(System) {
         e.animations = [e.stand, e.trot],
         n.exports
     }),
-    System.registerDynamic("43", ["21", "22", "24", "20", "3b", "47"], !0, function(t, e, n) {
+    System.registerDynamic("43", ["21", "gameDraw Methods&general misc functions", "24", "20", "3b", "47"], !0, function(require, e, module) {
         "use strict";
         function r() {
             return {
@@ -17751,26 +17751,26 @@ function(System) {
                 console.error(t)
             }
         }
-        var h = t("21")
-          , d = t("22")
-          , m = t("24")
-          , v = t("20")
-          , g = t("3b")
-          , y = t("47");
+        var h = require("21")
+          , d = require("gameDraw Methods&general misc functions")
+          , m = require("24")
+          , v = require("20")
+          , g = require("3b")
+          , y = require("47");
         return e.PONY_WIDTH = 80,
         e.PONY_HEIGHT = 70,
         e.BLINK_FRAMES = [2, 6, 6, 4, 2],
         e.createDefaultPonyState = r,
         e.drawPony2D = f,
         e.drawPonyGL = p,
-        n.exports
+        module.exports
     }),
-    System.registerDynamic("c1", ["21", "31", "43", "ponytownapp settings"], !0, function(t, e, n) {
+    System.registerDynamic("c1", ["21", "31", "43", "ponytownapp settings"], !0, function(require, e, n) {
         "use strict";
-        var r = t("21")
-          , i = t("31")
-          , o = t("43")
-          , a = t("ponytownapp settings")
+        var r = require("21")
+          , i = require("31")
+          , o = require("43")
+          , a = require("ponytownapp settings")
           , s = function() {
             function t(t, e, n) {
                 this.$location = t,
@@ -17842,16 +17842,16 @@ function(System) {
         return n.exports = '<div ng-init="vm.init()"><h1>Account settings</h1></div><div class="row"><div class="col-md-6"><form name="form" ng-submit="vm.submit()" style="max-width: 400px;" class="form"><div class="form-group"><h3>Account details</h3></div><div class="form-group"><label for="account-name" class="control-label">name</label><input id="account-name" type="text" ng-model="vm.data.name" required maxlength="{{vm.nameMaxLength}}" class="form-control"></div><div ng-if="vm.error" class="form-group"><div class="alert alert-danger">{{vm.error}}</div></div><div class="form-group"><button type="submit" ng-disabled="form.$pristine || form.$invalid || form.$pending" class="btn btn-primary">Save</button></div></form></div><div class="col-md-6"><div class="form form-horizontal"><div class="form-group row"><div class="col-xs-12"><h3>Game settings</h3></div></div><div class="form-group row"><div class="col-xs-6"><label class="control-label">bad word filter</label></div><div class="col-xs-6 btn-group"><label ng-model="vm.settings.filterSwearWords" uib-btn-radio="true" class="btn btn-primary">ON</label><label ng-model="vm.settings.filterSwearWords" uib-btn-radio="false" class="btn btn-primary">OFF</label></div></div><div class="form-group row"><div class="col-xs-6"><label class="control-label">hide all messages with russian text</label></div><div class="col-xs-6 btn-group"><label ng-model="vm.settings.filterCyrillic" uib-btn-radio="true" class="btn btn-primary">ON</label><label ng-model="vm.settings.filterCyrillic" uib-btn-radio="false" class="btn btn-primary">OFF</label></div></div></div></div><div class="row"><div class="col-xs-12"><a href="/" style="max-width: 200px; margin-top: 50px;" class="btn btn-lg btn-primary btn-block center-block"><i class="fa fa-angle-double-left"></i> Back to game</a></div></div></div>',
         n.exports
     }),
-    System.registerDynamic("ponytown app controller", ["<angular route passthrough>", "<angular animate passthrough>", "Angular UI bootstrap", "<angular passthrough>", "ponytown init", "ba", "bb", "bc", "c1", "c2", "c3", "c4", "c5"], !0, function(t, e, n) {
+    System.registerDynamic("ponytown app controller", ["<angular route passthrough>", "<angular animate passthrough>", "Angular UI bootstrap", "<angular passthrough>", "ponytown init", "ba", "bb", "bc", "c1", "c2", "c3", "c4", "c5"], !0, function(require, exports, module) {
         "use strict";
-        t("<angular route passthrough>"),
-        t("<angular animate passthrough>"),
-        t("Angular UI bootstrap");
-        var r = t("<angular passthrough>")
-          , i = t("ponytown init");
-        e.app = r.module("app", ["ngRoute", "ngAnimate", "ui.bootstrap"]),
-        i.init(e.app),
-        e.app.directive("a", function() {
+        require("<angular route passthrough>"),
+        require("<angular animate passthrough>"),
+        require("Angular UI bootstrap");
+        var angular = require("<angular passthrough>")
+          , ponyTownInit = require("ponytown init");
+        exports.app = angular.module("app", ["ngRoute", "ngAnimate", "ui.bootstrap"]),
+        ponyTownInit.init(exports.app),
+        exports.app.directive("a", function() {
             return {
                 restrict: "E",
                 link: function(t, e, n) {
@@ -17861,49 +17861,49 @@ function(System) {
             }
         });
         var o = function() {
-            function t(t, e) {
+            function game(t, e) {
                 this.gameService = t,
                 this.model = e
             }
-            return Object.defineProperty(t.prototype, "playing", {
+            return Object.defineProperty(game.prototype, "playing", {
                 get: function() {
                     return this.gameService.playing
                 },
                 enumerable: !0,
                 configurable: !0
             }),
-            t.prototype.init = function() {
+            game.prototype.init = function() {
                 var t = document.getElementById("music");
                 t && (t.volume = .15)
             }
             ,
-            t.$inject = ["gameService", "model"],
-            t
+            game.$inject = ["gameService", "model"],
+            game
         }();
-        e.app.component("ponyTownApp", {
+        exports.app.component("ponyTownApp", {
             controller: o,
             controllerAs: "vm",
-            template: t("ba")
+            template: require("ba")
         });
-        var a = t("bb")
-          , s = t("bc")
-          , l = t("c1");
-        return e.app.config(["$routeProvider", "$locationProvider", function(e, n) {
+        var a = require("bb")
+          , s = require("bc")
+          , l = require("c1");
+        return exports.app.config(["$routeProvider", "$locationProvider", function(e, n) {
             n.html5Mode(!0),
             e.when("/", {
-                template: t("c2"),
+                template: require("c2"),
                 controller: l.default,
                 controllerAs: "vm"
             }).when("/about", {
-                template: t("c3"),
+                template: require("c3"),
                 controller: function() {},
                 controllerAs: "vm"
             }).when("/character", {
-                template: t("c4"),
+                template: require("c4"),
                 controller: a.default,
                 controllerAs: "vm"
             }).when("/account", {
-                template: t("c5"),
+                template: require("c5"),
                 controller: s.default,
                 controllerAs: "vm"
             }).otherwise({
@@ -17911,7 +17911,7 @@ function(System) {
             })
         }
         ]),
-        n.exports
+        module.exports
     }),
     System.registerDynamic("bluebird js", [], !1, function(e, i, o) {
         var a = System.get("@@global-helpers").prepareGlobal(o.id, null , null );
