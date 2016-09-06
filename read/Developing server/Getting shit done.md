@@ -59,6 +59,9 @@ Reply Example:
 ```
 {"token":"{token}","connectionTokens":true,"tokenLifetime":3600000,"pingInterval":5000,"connectionTimeout":10000,"reconnectTimeout":500,"transferLimit":2000,"path":"{url}","perMessageDeflate":false,"client":["map",["subscribeRegion",{"binary":[1,1,[1]]}],["unsubscribeRegion",{"binary":[1,1]}],["updateTile",{"binary":[3,3,1]}],["myEntityId",{"binary":[5]}],["addEntities",{"binary":[[5,9,10,6,6,6,6,1]]}],["addEntity",{"binary":[5,9,10,6,6,6,6,1]}],["updateEntities",{"binary":[[5,6,6,6,6,1],[5]]}],"updateEntityOptions","says","left"],"server":[["say",{"rateLimit":500}],["interact",{"rateLimit":500,"binary":[5]}],["update",{"binary":[5,5]}],["changeTile",{"rateLimit":300,"binary":[3,3]}],"leave"],"hash":1471995757993,"clientLimit":0}
 ```
+client checks for the debug:true property
+In case they are debugged they also have an ignore property so they are not shown by the debugger thingie
+
 
 Websocket Protocol
 --------------------
