@@ -175,12 +175,152 @@ var PonyTownApp=(function()
     Region.prototype.REGION_HEIGHT=20;
     Region.prototype.REGION_WIDTH=20;
 
-    function PonyCharacter(){
-
+  var PonyCharacter=(function(){function PonyCharacter(ponyobject){
+Object.assign(this,ponyobject);
+}
+function compressColor(t) {
+      return t ? U.default.parse(t).toHexRGB() : ""
     }
-    PonyCharacter.prototype.minify=function(){
 
+    function deleteNulls(t) {
+      return Object.keys(t).forEach(function (e) {
+        null == t[e] && delete t[e]
+      }),
+          t
     }
+
+    function booloeanToInt(boolean) {
+      return boolean ? 1 : 0
+    }
+
+    function numberButZero(number) {
+      return !!+number
+    }
+
+    function compressBooleans(t, e) {
+      return t.slice(0, e).map(booloeanToInt).join(" ")
+    }
+
+    function decompressBooleans(t) {
+      return t && t.split ? t.split(" ").map(numberButZero) : null
+    }
+
+    function compressColours(t, e) {
+      return t.slice(0, e).map(compressColor).join(" ")
+    }
+
+    function decompressColor(t) {
+      return t && t.split ? t.split(" ") : null
+    }
+	    function decompressPonyObject(t) {
+      return t ? {
+        type: t[0],
+        pattern: t[1],
+        fills: decompressColor(t[2]),
+        outlines: decompressColor(t[3]),
+        lockFills: decompressBooleans(t[4]),
+        lockOutlines: decompressBooleans(t[5])
+      } : null
+    }
+	    function compressPonyObject(objToCompress, e, n, r) {
+      if (void 0 === n && (n = !0),
+          void 0 === r && (r = 0),
+          !objToCompress || n && 0 === objToCompress.type)
+        return null;
+      var o = 6;
+      return [objToCompress.type, objToCompress.pattern, compressColours(objToCompress.fills, o), compressColours(objToCompress.outlines, o), compressBooleans(objToCompress.lockFills, o), compressBooleans(objToCompress.lockOutlines, o)]
+    }
+PonyCharacter.create=function(){}
+PonyCharacter.decompress=function(t) {
+      var e = {
+        id: t.id,
+        name: t.name,
+        site: t.site,
+        lastUsed: t.lastUsed,
+        horn: decompressPonyObject(t.h),
+        wings: decompressPonyObject(t.w),
+        frontHooves: decompressPonyObject(t.fh),
+        backHooves: decompressPonyObject(t.bh),
+        mane: decompressPonyObject(t.deleteNulls),
+        backMane: decompressPonyObject(t.bm),
+        tail: decompressPonyObject(t.t),
+        facialHair: decompressPonyObject(t.fac),
+        headAccessory: decompressPonyObject(t.ha),
+        earAccessory: decompressPonyObject(t.ea),
+        faceAccessory: decompressPonyObject(t.fa),
+        neckAccessory: decompressPonyObject(t.na),
+        frontLegAccessory: decompressPonyObject(t.fla),
+        backLegAccessory: decompressPonyObject(t.bla),
+        lockBackLegAccessory: numberButZero(t.lbl),
+        coatFill: t.cf,
+        coatOutline: t.co,
+        lockCoatOutline: numberButZero(t.lco),
+        eyelashes: t.el,
+        eyeColorLeft: t.ecl,
+        eyeColorRight: t.ecr,
+        eyeWhites: t.ew,
+        eyeOpennessLeft: t.eol,
+        eyeOpennessRight: t.eor,
+        eyeshadow: numberButZero(t.es),
+        eyeshadowColor: t.esc,
+        lockEyes: numberButZero(t.le),
+        lockEyeColor: numberButZero(t.lec),
+        fangs: t.fan,
+        muzzle: t.mu,
+        freckles: t.fr,
+        frecklesColor: t.frc,
+        cm: t.cm,
+        cmFlip: numberButZero(t.cmf),
+        customOutlines: numberButZero(t.col)
+      };
+      return new PonyCharacter(e)
+    }
+PonyCharacter.prototype.compress=function() {
+	var ponyobj=this, e = {
+        name: ponyobj.name,
+        site: ponyobj.site,
+        h: compressPonyObject(ponyobj.horn, null),
+        w: compressPonyObject(ponyobj.wings, null),
+        fh: compressPonyObject(ponyobj.frontHooves, null),
+        bh: compressPonyObject(ponyobj.backHooves, null),
+        m: compressPonyObject(ponyobj.mane, null, !1, 1),
+        bm: compressPonyObject(ponyobj.backMane, null, !1),
+        t: compressPonyObject(ponyobj.tail, null, !1),
+        fac: compressPonyObject(ponyobj.facialHair, null),
+        ha: compressPonyObject(ponyobj.headAccessory, null),
+        ea: compressPonyObject(ponyobj.earAccessory, null),
+        fa: compressPonyObject(ponyobj.faceAccessory, null),
+        na: compressPonyObject(ponyobj.neckAccessory, null),
+        fla: compressPonyObject(ponyobj.frontLegAccessory, null),
+        bla: ponyobj.lockBackLegAccessory ? null : compressPonyObject(ponyobj.backLegAccessory, null),
+        lbl: booloeanToInt(ponyobj.lockBackLegAccessory),
+        cf: compressColor(ponyobj.coatFill),
+        co: compressColor(ponyobj.coatOutline),
+        lco: booloeanToInt(ponyobj.lockCoatOutline),
+        el: ponyobj.eyelashes,
+        ecl: compressColor(ponyobj.eyeColorLeft),
+        ecr: compressColor(ponyobj.eyeColorRight),
+        ew: compressColor(ponyobj.eyeWhites),
+        eol: ponyobj.eyeOpennessLeft,
+        eor: ponyobj.eyeOpennessRight,
+        es: booloeanToInt(ponyobj.eyeshadow),
+        esc: compressColor(ponyobj.eyeshadowColor),
+        le: booloeanToInt(ponyobj.lockEyes),
+        lec: booloeanToInt(ponyobj.lockEyeColor),
+        fan: ponyobj.fangs,
+        mu: ponyobj.muzzle,
+        fr: ponyobj.freckles,
+        frc: ponyobj.freckles ? compressColor(ponyobj.frecklesColor) : null,
+        cm: ponyobj.cm && ponyobj.cm.some(function (t) {
+          return !!t
+        }) ? ponyobj.cm.map(compressColor) : null,
+        cmf: booloeanToInt(ponyobj.cmFlip),
+        col: booloeanToInt(ponyobj.customOutlines)
+      };
+      return deleteNulls(e)
+    }
+return PonyCharacter;
+})()
     /**
      *
      * @param {string} type
@@ -279,7 +419,7 @@ var PonyTownApp=(function()
         coordinatesToIndex:coordinatesToIndex,
         createArray:createArray
     };
-
+PonyTownApp.prototype.binaryOrder=["Int8", "Uint8", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "Boolean", "String", "Object"];
     return PonyTownApp;
 })();
 module.exports =PonyTownApp;

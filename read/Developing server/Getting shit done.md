@@ -10,7 +10,7 @@ code but just getting shit done.
 
 Reverse Engineering?
 ---------------
-*This is how the protocol works at time of writing version `0.13.2-alpha`, protocol can and will probably change, so you should do your own investigation and research*
+*This is how the protocol works at time of writing version (`0.13.2-alpha`)`16.0`, protocol can and will probably change, so you should do your own investigation and research*
 After having skimmed the whole code and having a general idea of what the game
 does, you'll have more insight on what the requests should do, for this however we should look up how the requests
 are handled.
@@ -26,13 +26,22 @@ choosing, we get to /auth/{service}/callback?code={CallBackCode} This CallBackCo
 
 In the response request we get a set cookie header that sets `connect.sid`, it's HttpOnly.
 
-### Requesting ponies
+### Requesting ponies -OLD
 After logging in our first request is /api/pony this will return an array of the ponies, we have stored in a compressed form.
 An example JSON for illustration purposes is.
 
 ```
 [{"name":"Example Pony","m":[2,0,"ffd700","b39700","0","1"],"bm":[1,0,"ffd700","b39700","1","1"],"t":[1,0,"ffd700","b39700","1","1"],"cf":"ff0000","co":"8b0000","lco":1,"el":0,"ecl":"daa520","ecr":"daa520","ew":"ffffff","eol":1,"eor":1,"es":0,"esc":"000000","le":1,"lec":1,"fan":0,"mu":0,"fr":0,"cmf":0,"col":0,"id":"{id}","lastUsed":"{last used}"}]
+
 ```
+### Requesting Account
+
+you request your account status with all and ponies.
+
+```
+{"id":(the id of your account),"name":{name},"roles":[],"settings":{"filterSwearWords":false,"defaultServer":"safe"},"ponies":[{"name":"Example Pony","m":[2,0,"ffd700","b39700","0","1"],"bm":[1,0,"ffd700","b39700","1","1"],"t":[1,0,"ffd700","b39700","1","1"],"cf":"ff0000","co":"8b0000","lco":1,"el":0,"ecl":"daa520","ecr":"daa520","ew":"ffffff","eol":1,"eor":1,"es":0,"esc":"000000","le":1,"lec":1,"fan":0,"mu":0,"fr":0,"cmf":0,"col":0,"id":"{id}","lastUsed":"{last used}"}],"sites":[(sites related to the account)]}
+```
+
 ### Requesting status
 We make a get request to /api/status and we get the number of servers there are.
 

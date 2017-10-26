@@ -299,6 +299,10 @@ System.registerDynamic("main", ["amd es6-shims passthrough", "toBlobShim", "Canv
 ```
 We can see more obviously that they're initializing the angular app here.
 
+#### Declutering game code
+
+there are many npm requires which are the main percentage of the code, and just a tenth of the code is related to the game code, we don't really care about what the other parts do which is why I tried to split them, I had to think on a solution that would surive updates for when aggie wanted to update the code, everything would be renamed, destroying all my hard work. So my idea was to make a wrapper around the requires, so instead of `require("readable name")` do `require(getCodeName("readable name"))` the getCodeName then would get the ugly old name, so names would be "transparent".
+
 
 
 Creating the server
