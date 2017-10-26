@@ -1,0 +1,8 @@
+{
+  "name": "PonyTown",
+  "description": "PonyTown server that we never managed to complete",
+  "repository": "https://github.com/RainbowDangerDash/PT",
+  "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaSbbq3h70vt68GdzIrcbhJnN1mpoZ4sDdwwfv5ec4N2cPmtWE",
+  "keywords": ["mlp"],
+  "image": "heroku/nodejs"
+}
